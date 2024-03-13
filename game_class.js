@@ -52,9 +52,12 @@ class Veneno extends Obj{
     }
 }
 
-class Estrada extends Obj{
-    des_estrada(){
+class Campo extends Obj{
+    des_campo(){
 
+    }
+    recomeca(){
+        
     }
 }
 class Fruta extends Obj{
@@ -62,7 +65,7 @@ class Fruta extends Obj{
 
     }
     recomeca(){
-        
+
     }
 
 }
