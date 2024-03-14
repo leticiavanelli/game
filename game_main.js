@@ -47,3 +47,16 @@ function pontos(){
     }
 
 }
+
+function colisao(){
+    if(boneco.colid(c2)){
+        boneco.vida -=1
+        c2.recomeca()
+        batida.play()
+    }else if(boneco.colid(c3)){
+        boneco.vida -=1
+        c3.recomeca()
+        batida.play()
+    }
+}
+
