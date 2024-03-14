@@ -16,6 +16,7 @@ class Obj{
         img.src = this.a
         des.drawImage(img,this.x, this.y,this.w,this.h)
         //imagens do boneco
+        //teste
     }
 }
 
