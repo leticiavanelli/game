@@ -53,15 +53,17 @@ class Veneno extends Obj{
 
 class Campo extends Obj{
     des_campo(){
-
+        des.fillStyle = this.a
+        des.fillRect(this.x,this.y,this.w,this.h)
     }
     recomeca(){
-        
+        des.fillStyle = this.a
+        des.fillRect(this.x,this.y,this.w,this.h)
     }
 }
 class Fruta extends Obj{
     atualiza_fruta(){
-
+        
     }
     recomeca(){
 
