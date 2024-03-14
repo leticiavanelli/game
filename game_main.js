@@ -24,7 +24,7 @@ document.addEventListener('keydown',(e) => {
     if(e.key == 'a'){
     boneco.dir -=10
     console.log("esquerda = ",boneco.dir)
-    }else if (e.key === 'd'){
+    }else if (e.key === 'a'){
         boneco.dir +=10
         
     }
