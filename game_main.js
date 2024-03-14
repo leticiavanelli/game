@@ -19,3 +19,22 @@ let batida = new Audio ('.')
 motor.volume = 0.8
 motor.loop = true
 batida.volume = 1.0 
+
+document.addEventListener('keydown',(e) => {
+    if(e.key == 'a'){
+    boneco.dir -=10
+    console.log("esquerda = ",boneco.dir)
+    }else if (e.key === 'd'){
+        boneco.dir +=10
+        
+    }
+   
+})
+
+document.addEventListener('keyup', (e) => {
+    if(e.key === 'a'){
+        boneco.dir = 0
+    }else if (e.key === 'd'){
+        boneco.dir = 0
+    }
+})
