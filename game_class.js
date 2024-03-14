@@ -43,7 +43,7 @@ class Boneco extends Obj{
 class Veneno extends Obj{
     atualiza_inim(){
         //programando atualiza inimigo 
-
+        
     }
 
     recomeca(){
@@ -63,10 +63,14 @@ class Campo extends Obj{
 }
 class Fruta extends Obj{
     atualiza_fruta(){
-        
+        this.y += 2
+        if(this.y >= 780){
+            this.recomeca()
+        }
     }
     recomeca(){
-
+        this.y = -100
+        this.x = Math.floor(Math.random() * ((416 - 2 + 1) + 2)) //quando a fruta sair da tela
     }
 
 }
