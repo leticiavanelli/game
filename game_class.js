@@ -12,11 +12,9 @@ class Obj{
 
     }
     des_img(){
-        let img = new Image()
+       des.drawImage(img,this.x, this.y,this.w,this.h)
+         let img = new Image()
         img.src = this.a
-        des.drawImage(img,this.x, this.y,this.w,this.h)
-        //imagens do boneco
-        //teste
     }
 }
 
@@ -27,25 +25,36 @@ class Boneco extends Obj{
     frame = 1
     tempo = 0
 
-    des_boneco(){
-
+    atual_boneco(){
+        this.x += this.dir
+        if(this.x <=2){
+            this.x = 2
+        }else if(this.x >= 416){
+            this.x = 416
+            }
+        }
+        point(Obj){
+            if((Obj.y>=680)&&(Obj.y<=690)){
+                return true
+            }else[
+                false
+            ]
+        }
+        
+        colid(Obj){
+            if((this.x <Obj.x + Obj.w)&&
+            (this.x + this.w > Obj.x)&&
+            (this.y < Obj.y + Obj.h)&&
+            (this.y + this.h > Obj.y)){
+                return true
+                }
+            }
     }
 
-    atualiza_boneco(){
-
-    }
-
-    point(){
-
-    }
-    
-    colid(){
-
-    }
-}
+   
 
 class Veneno extends Obj{
-    atualiza_inim(){
+    atual_veneno(){
 
     }
 
@@ -54,17 +63,17 @@ class Veneno extends Obj{
     }
 }
 
-class Estrada extends Obj{
-    des_estrada(){
+class Campo extends Obj{
+    des_campo(){
 
     }
 }
 class Fruta extends Obj{
-    atualiza_fruta(){
+    atual_fruta(){
 
     }
     recomeca(){
-
+        
     }
 
 }
