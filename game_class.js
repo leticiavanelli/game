@@ -42,6 +42,7 @@ class Boneco extends Obj{
 
 class Veneno extends Obj{
     atualiza_inim(){
+        //programando atualiza inimigo 
 
     }
 
