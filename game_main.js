@@ -39,6 +39,13 @@ document.addEventListener('keyup', (e) => {
     }
 })
 
+function game_over(){
+    if(boneco.vida <=0){
+        jogar = false
+        motor.pause()
+    }
+
+}
 function pontos(){
     if(boneco.point(c2)){
         boneco.pts +=1
@@ -59,4 +66,60 @@ function colisao(){
         batida.play()
     }
 }
+
+function desenha(){
+    t1.des_text('Pontos:',360,20,'yellow', '26px Times')
+    t2.des_text(boneco.pts,445,20,'yellow', '26px Times')
+    t3.des_text('Vida:',40,20,'yellow', '26px Times')
+    t4.des_text(boneco.vida,110,20,'red', '26px Times')
+
+    if(jogar){
+       ee.des_estrada()
+       es.des_estrada()
+       ec1.des_estrada()
+       ec2.des_estrada()
+       ec3.des_estrada()
+       ec4.des_estrada()
+       ec5.des_estrada()
+       ec6.des_estrada()
+       ec7.des_estrada()
+       c2.des_img()
+       c3.des_img()
+       boneco.des_img()
+    }else{
+       ee.des_estrada()
+       es.des_estrada()
+       t5.des_text('Game Over', 170, 340,'red','40px Times')
+    }
+
+}
+function atualiza(){
+    if(jogar){
+        motor.play()
+        ec1.mov_estrada()
+        ec2.mov_estrada()
+        ec3.mov_estrada()
+        ec4.mov_estrada()
+        ec5.mov_estrada()
+        ec6.mov_estrada()
+        ec7.mov_estrada()
+        c2.atualiza_carro2()
+        c3.atualiza_carro2()
+        boneco.atualiza_carro()
+        // carro.anim('carro_01_1')
+        pontos()
+        colisao()
+        game_over()
+    }
+   
+}
+
+function main(){
+    des.clearRect(0,0,500,700)
+    desenha()
+    atualiza()
+    requestAnimationFrame(main)
+}
+
+main()
 
