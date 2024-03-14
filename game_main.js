@@ -38,3 +38,12 @@ document.addEventListener('keyup', (e) => {
         boneco.dir = 0
     }
 })
+
+function pontos(){
+    if(boneco.point(c2)){
+        boneco.pts +=1
+    }else if(boneco.point(c3)){
+        boneco.pts += 1
+    }
+
+}
