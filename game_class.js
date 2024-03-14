@@ -55,11 +55,15 @@ class Boneco extends Obj{
 
 class Veneno extends Obj{
     atual_veneno(){
-
+        this.y += 2
+        if(this.y >= 780){
+            this.recomeca()
+        }
     }
 
     recomeca(){
-
+        this.y = -100
+        this.x = Math.floor (Math.random() * ((416 - 2 + 1) + 2)) //quando o carro sair da tela
     }
 }
 
