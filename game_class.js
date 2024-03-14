@@ -25,10 +25,7 @@ class Boneco extends Obj{
     frame = 1
     tempo = 0
 
-    des_boneco(){
-
-    }
-
+   
     atualiza_boneco(){
 
     }
