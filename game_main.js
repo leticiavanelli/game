@@ -4,9 +4,11 @@ let boneco = new Boneco(100,400,160,160,'./assets/assustado.png')
 let c2 = new Veneno(400,-40,80,80,'./assets/comidapodre.png')
 let c3 = new Veneno(200,-280,80,80,'./assets/bananaestragada.png')
 let c4 = new Fruta(400,-40,80,80,'./assets/hamburguer.png')
-let c5 = new Fruta(200,-280,80,80,'./assets/maça.png')
-let c6 = new Veneno(200,-280,80,80,'./assets/maçapodre.png')
+let c5 = new Fruta(200,-280,80,80,'./assets/maca.png')
+let c6 = new Veneno(200,-280,80,80,'./assets/macapodre.png')
 let c7 = new Fruta(200,-280,80,80,'./assets/sushi.png')
+let ee = new Campo(2,2,10,696,'white')
+let es = new Campo(488,2,10,696,'white')
 
 
 let t1 = new Text()
@@ -74,15 +76,8 @@ function desenha(){
     t4.des_text(boneco.vida,110,20,'red', '26px Times')
 
     if(jogar){
-       ee.des_estrada()
-       es.des_estrada()
-       ec1.des_estrada()
-       ec2.des_estrada()
-       ec3.des_estrada()
-       ec4.des_estrada()
-       ec5.des_estrada()
-       ec6.des_estrada()
-       ec7.des_estrada()
+       ee.des_campo()
+       es.des_campo()
        c2.des_img()
        c3.des_img()
        boneco.des_img()
@@ -95,14 +90,7 @@ function desenha(){
 }
 function atualiza(){
     if(jogar){
-        motor.play()
-        ec1.mov_estrada()
-        ec2.mov_estrada()
-        ec3.mov_estrada()
-        ec4.mov_estrada()
-        ec5.mov_estrada()
-        ec6.mov_estrada()
-        ec7.mov_estrada()
+        // motor.play()
         c2.atualiza_carro2()
         c3.atualiza_carro2()
         boneco.atualiza_carro()
