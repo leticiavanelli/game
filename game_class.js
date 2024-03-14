@@ -12,9 +12,9 @@ class Obj{
 
     }
     des_img(){
-       des.drawImage(img,this.x, this.y,this.w,this.h)
-         let img = new Image()
+        let img = new Image()
         img.src = this.a
+        des.drawImage(img,this.x, this.y,this.w,this.h)
     }
 }
 
@@ -26,7 +26,7 @@ class Boneco extends Obj{
     tempo = 0
 
     des_boneco(){
-
+        // programa desenhando boneco
     }
 
     atualiza_boneco(){
