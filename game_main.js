@@ -13,3 +13,9 @@ let t1 = new Text()
 let t2 = new Text()
 let t3 = new Text()
 let t4 = new Text()
+
+let motor = new Audio ('.')
+let batida = new Audio ('.')
+motor.volume = 0.8
+motor.loop = true
+batida.volume = 1.0 
