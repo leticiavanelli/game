@@ -12,9 +12,11 @@ class Obj{
 
     }
     des_img(){
-       des.drawImage(img,this.x, this.y,this.w,this.h)
-         let img = new Image()
+        let img = new Image()
         img.src = this.a
+        des.drawImage(img,this.x, this.y,this.w,this.h)
+        //imagens do boneco
+        //teste
     }
 }
 
@@ -24,10 +26,6 @@ class Boneco extends Obj{
     vida = 5
     frame = 1
     tempo = 0
-
-    des_boneco(){
-
-    }
 
     atualiza_boneco(){
 
